@@ -1,15 +1,15 @@
 <template>
-  <div class="box" :class="{'selected': selected}" @click="selectBox">
+  <div class="box" :class="{ selected: selected }" @click="selectBox">
     <p>{{ label }}</p>
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Prop, Vue } from "vue-property-decorator";
+import { Component, Prop, Vue } from 'vue-property-decorator'
 
 @Component({})
 export default class Box extends Vue {
-  @Prop() private label!: string;
+  @Prop() private label!: string
   selected: boolean = false
 
   selectBox() {
