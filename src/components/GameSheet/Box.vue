@@ -1,7 +1,7 @@
 <template>
-  <button class="box">
-    {{ label }}
-  </button>
+  <div class="box">
+    <p>{{ label }}</p>
+  </div>
 </template>
 
 <script lang="ts">
@@ -19,7 +19,5 @@ export default class Box extends Vue {
   border: 1px solid grey;
   margin: 1px;
   padding: 10px;
-  background: none;
-  outline: none;
 }
 </style>
