@@ -1,6 +1,6 @@
 <template>
   <div class="box-wrapper">
-    <Box v-for="label in shuffle(boxLabels)" :key="label" :label="label"></Box>
+    <Box v-for="label in shuffle(boxLabels).slice(0, 25)" :key="label" :label="label"></Box>
   </div>
 </template>
 <script lang="ts">
@@ -57,8 +57,9 @@ export default class GameSheet extends Vue {
 </script>
 <style scoped>
 .box-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  /*justify-content: center;*/
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  max-width: 1000px;
 }
 </style>

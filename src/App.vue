@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <h1>Scrum Bingo!</h1>
+    <h1 class="header">Scrum Bingo!</h1>
     <GameSheet></GameSheet>
   </div>
 </template>
@@ -27,5 +27,6 @@ export default class App extends Vue {}
   margin-top: 60px;
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 </style>

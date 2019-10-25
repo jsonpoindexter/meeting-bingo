@@ -19,11 +19,10 @@ export default class Box extends Vue {
 </script>
 <style scoped>
 .box {
-  width: 100px;
-  height: 100px;
   border: 1px solid grey;
   margin: 1px;
   padding: 10px;
+  user-select: none;
 }
 
 .selected {
