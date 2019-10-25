@@ -13,6 +13,7 @@ import Box from '@/components/GameSheet/Box.vue'
 })
 export default class GameSheet extends Vue {
   boxLabels: string[] = [
+    'FREE SPACE',
     "'Action Item'",
     "'Can you see my screen?'",
     "'Grooming Session'",
@@ -22,7 +23,6 @@ export default class GameSheet extends Vue {
     "'Killing it'",
     "'---- can you go on mute'",
     "'Sorry, I was on mute'",
-    'FREE SPACE',
     "'--- here!' in the middle of a conversation",
     'scrum is longer than 15min (free space)',
     "'Launch Readiness'",

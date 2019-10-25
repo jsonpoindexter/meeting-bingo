@@ -10,10 +10,10 @@ import { Component, Prop, Vue } from 'vue-property-decorator'
 @Component({})
 export default class Box extends Vue {
   @Prop() private label!: string
-  selected: boolean = false
+  selected: boolean = this.label === 'FREE SPACE'
 
   selectBox() {
-    this.selected = !this.selected
+    if (this.label !== 'FREE SPACE') this.selected = !this.selected
   }
 }
 </script>
