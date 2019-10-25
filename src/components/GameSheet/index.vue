@@ -1,6 +1,6 @@
 <template>
   <div class="box-wrapper">
-    <Box v-for="label in shuffle(boxLabels).slice(0, 25)" :key="label" :label="label"></Box>
+    <Box v-for="label in boxLabels" :key="label" :label="label"></Box>
   </div>
 </template>
 <script lang="ts">
@@ -12,8 +12,7 @@ import Box from '@/components/GameSheet/Box.vue'
   },
 })
 export default class GameSheet extends Vue {
-  boxLabels: string[] = [
-    'FREE SPACE',
+  boxLabels: string[] = this.shuffle([
     "'Action Item'",
     "'Can you see my screen?'",
     "'Grooming Session'",
@@ -40,7 +39,11 @@ export default class GameSheet extends Vue {
     '"SEO/OEP"',
     "'Accessibility'",
     "'Responsive'",
-  ]
+  ]).slice(0, 24)
+
+  created() {
+    this.boxLabels.splice(12, 0, 'FREE SPACE')
+  }
 
   /**
    * Shuffles array in place. ES6 version
