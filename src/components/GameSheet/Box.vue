@@ -1,6 +1,6 @@
 <template>
   <div class="box" :class="{ selected: selected }" @click="selectBox">
-    <p>{{ label }}</p>
+    {{ label }}
   </div>
 </template>
 
@@ -23,8 +23,12 @@ export default class Box extends Vue {
   margin: 1px;
   padding: 10px;
   user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 150px;
+  min-height: 150px;
 }
-
 .selected {
   background-color: lightgreen;
 }
