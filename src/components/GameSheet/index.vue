@@ -17,7 +17,6 @@ export default class GameSheet extends Vue {
     "'Can you see my screen?'",
     "'Grooming Session'",
     "'Hypercare'",
-    "'Dark Launch'",
     "'Callout'",
     "'Killing it'",
     "'---- can you go on mute'",
