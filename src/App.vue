@@ -1,25 +1,25 @@
 <template>
   <div id="app">
     <h1 class="header">Scrum Bingo!</h1>
-    <GameSheet></GameSheet>
+    <GameSheet />
   </div>
 </template>
 
 <script lang="ts">
-import { Component, Vue } from "vue-property-decorator";
-import GameSheet from "@/components/GameSheet/index.vue";
+import { Component, Vue } from 'vue-property-decorator'
+import GameSheet from '@/components/GameSheet/index.vue'
 
 @Component({
   components: {
-    GameSheet
-  }
+    GameSheet,
+  },
 })
 export default class App extends Vue {}
 </script>
 
 <style>
 #app {
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
