@@ -33,12 +33,10 @@ export default class GameSheet extends Vue {
     "'I'm thinking...'",
     "'Sorry, I missed that..'",
     'screen sharing a DM',
-    "screen sharer's Download bar in the browser open",
+    "screen sharer's Download bar in the browser is open",
     'screen sharer has low laptop battery',
-    '"Analytics"',
-    '"SEO/OEP"',
-    "'Accessibility'",
     "'Responsive'",
+    'eating over the microphone',
   ]).slice(0, 24)
 
   created() {
@@ -60,7 +58,7 @@ export default class GameSheet extends Vue {
 </script>
 <style scoped>
 .box-wrapper {
-  margin-top: 40px;
+  margin-top: 10px;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
   max-width: 1000px;
