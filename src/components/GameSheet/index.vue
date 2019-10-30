@@ -35,6 +35,7 @@ export default class GameSheet extends Vue {
     "screen sharer's Download bar in the browser open",
     'screen sharer has low laptop battery',
     "'Responsive'",
+    "'Help me understand...'",
   ]).slice(0, 24)
 
   created() {
