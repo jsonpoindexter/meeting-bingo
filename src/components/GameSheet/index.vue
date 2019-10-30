@@ -17,7 +17,6 @@ export default class GameSheet extends Vue {
     "'Can you see my screen?'",
     "'Grooming Session'",
     "'Hypercare'",
-    "'Dark Launch'",
     "'Callout'",
     "'Killing it'",
     "'---- can you go on mute'",
@@ -35,9 +34,6 @@ export default class GameSheet extends Vue {
     'screen sharing a DM',
     "screen sharer's Download bar in the browser open",
     'screen sharer has low laptop battery',
-    '"Analytics"',
-    '"SEO/OEP"',
-    "'Accessibility'",
     "'Responsive'",
   ]).slice(0, 24)
 
