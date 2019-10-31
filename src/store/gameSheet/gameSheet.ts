@@ -2,6 +2,7 @@ import { ActionContext, Store } from 'vuex'
 import { State as RootState } from '../state'
 import { BingoBox, GameSheetState } from './gameSheetState'
 import { getStoreAccessors } from 'vuex-typescript'
+import { shuffle } from '@/helpers/gameSheet'
 
 // Needed for actions
 type GameSheetContext = ActionContext<GameSheetState, RootState>
@@ -10,7 +11,7 @@ export const gameSheet = {
   namespaced: true,
 
   state: {
-    bingoBoxes: [
+    bingoBoxes: shuffle([
       { label: "'Action Item'", selected: false },
       { label: "'Can you see my screen?'", selected: false },
       { label: "'Grooming Session'", selected: false },
@@ -34,7 +35,7 @@ export const gameSheet = {
       { label: 'screen sharer has low laptop battery', selected: false },
       { label: "'Responsive'", selected: false },
       { label: 'eating over the microphone', selected: false },
-    ],
+    ]).slice(0, 24),
   },
 
   getters: {
@@ -44,8 +45,10 @@ export const gameSheet = {
   },
 
   mutations: {
-    reset(state: GameSheetState) {
-      state.bingoBoxes = []
+    clearSelected(state: GameSheetState) {
+      state.bingoBoxes.map(box => {
+        box.selected = false
+      })
     },
   },
 
@@ -58,5 +61,5 @@ const getters = gameSheet.getters
 const actions = gameSheet.actions
 const mutations = gameSheet.mutations
 
-export const commitReset = commit(mutations.reset)
+export const commitReset = commit(mutations.clearSelected)
 export const readBingoBoxes = read(getters.getBingoBoxes)
