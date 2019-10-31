@@ -1,19 +1,19 @@
 <template>
-  <div class="box" :class="{ selected: selected }" @click="selectBox">
-    {{ label }}
+  <div class="box" :class="{ selected: bingoBox.selected }" @click="selectBox">
+    {{ bingoBox.label }}
   </div>
 </template>
 
 <script lang="ts">
 import { Component, Prop, Vue } from 'vue-property-decorator'
+import { BingoBox } from '@/components/GameSheet/box'
 
 @Component({})
 export default class Box extends Vue {
-  @Prop() private label!: string
-  selected: boolean = this.label === 'FREE SPACE'
+  @Prop() private bingoBox!: BingoBox
 
   selectBox() {
-    if (this.label !== 'FREE SPACE') this.selected = !this.selected
+    if (this.bingoBox.label !== 'FREE SPACE') this.bingoBox.selected = !this.bingoBox.selected
   }
 }
 </script>
